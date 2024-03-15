@@ -5,14 +5,11 @@ pinMode(A1,INPUT);  // Y-axis
 pinMode(12,INPUT);  // Switch reading pin
 
 pinMode(2,OUTPUT);  // red led
-pinMode(3,OUTPUT);  // green led
 
-pinMode(13,OUTPUT); //switch power pin
 Serial.begin(9600);
 }
 void loop() {
-digitalWrite(13,1); // powering on the switch
-
+  
 int s= digitalRead(12); // reading switch
 if(s==1){ // if switch on
   digitalWrite(2,0); // powering off the red led  
@@ -36,7 +33,7 @@ else if(((y>=325) && (y<=350)) && ((x>=270) && (x<=315))){ // left
     Serial.println("a"); 
  }
  else{
-  Serial.println("stop"); 
+  Serial.println("p"); 
  }
 }
 else{ //if switch off
